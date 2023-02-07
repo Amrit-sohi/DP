@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Fibonacci{
 
-    // Code of Fibonacci using onlu recursion 
+    // Code of Fibonacci using recursion 
     public static int fibonacci(int n){ // Time Compexity :  O(2^n)
         if(n == 0 || n == 1) {
             return n;
@@ -10,7 +10,7 @@ public class Fibonacci{
     }
 
     // Code of Fibonacci Using Dynamic Programming
-    public static int fibonacci(int n,int dp[]){ // Time Complexity : O(n);
+    public static int fibonacci(int n,int dp[]){ // Time Complexity : O(n)
         if(n == 0 || n == 1){
             return n;
         }
@@ -27,6 +27,7 @@ public class Fibonacci{
         int num = sc.nextInt();
         System.out.println("Fibonacci of " + num + " by using simple recursion = " + fibonacci(num));
         
+        // to memoize sub problems that's already calculated
         int dp[] = new int[num+1];
         System.out.println("Fibonacci of " + num + " by using dynamic programming = " + fibonacci(num,dp));
         
