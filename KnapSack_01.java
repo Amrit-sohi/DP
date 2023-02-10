@@ -35,14 +35,14 @@ public class KnapSack_01{
 
         if(wt[n-1] <= W){ // Valid
             // Including
-            int ans1 = val[n-1] + knapSack(val, wt, W-wt[n-1], n-1);
+            int ans1 = val[n-1] + knapSack(val, wt, W-wt[n-1], n-1,dp);
             // Excluding
-            int ans2 = knapSack(val, wt, W, n-1);
+            int ans2 = knapSack(val, wt, W, n-1,dp);
 
             dp[n][W] = Math.max(ans1, ans2);
             return dp[n][W];
         }else{ // Invalid
-            dp[n][W] = knapSack(val, wt, W, n-1);
+            dp[n][W] = knapSack(val, wt, W, n-1,dp);
             return dp[n][W];
         }
     }
