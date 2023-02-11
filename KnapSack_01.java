@@ -84,7 +84,17 @@ public class KnapSack_01{
                 }
             }
         }
+        // print(dp);
         return dp[n][W]; // Here our answer for weight = W is stored,that we return to main.
+    }
+    // Utitlity to print DP array to verify process
+    public static void print(int dp[][]){
+        for (int[] row : dp) {
+            for (int ele : row) {
+                System.out.print(ele + " ");
+            }
+            System.out.println();
+        }
     }
     public static void main(String[] args) {
         int val[] = {15,14,10,45,30};
