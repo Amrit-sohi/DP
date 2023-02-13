@@ -1,5 +1,5 @@
 public class TargetSumSubset{
-
+    // this problem is a variation of knapsack01
     //Code Using recursion
     public static boolean isTargetSumSubset(int arr[],int targetSum,int n){ // Time Complexity : O(2^n)
         if(n == 0){
