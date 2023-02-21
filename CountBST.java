@@ -1,4 +1,5 @@
 public class CountBST {
+    // Find number of all possible BST's having n nodes
     public static int count_bst(int nodes) {
         int dp[] = new int[nodes+1];
 
